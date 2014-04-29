@@ -110,3 +110,7 @@ ul.breadcrumb {
 .collapsed > .foldable :link {
     background: none;
 }
+
+dt.wiki, dt.wiki a {
+  background-repeat: no-repeat !important;
+}
