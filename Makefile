@@ -2,6 +2,33 @@ BUILD_FOLDER=build
 PROJECT_NAME=test-project
 BUILD_PROJECT=${BUILD_FOLDER}/${PROJECT_NAME}
 
+install:
+	cp -r htdocs/* ${TRAC_PATH}/htdocs
+	cp -r templates/* ${TRAC_PATH}/templates
+	mkdir -p ${TRAC_PATH}/htdocs/css
+	mkdir -p ${TRAC_PATH}/htdocs/js
+	mkdir -p ${TRAC_PATH}/htdocs/fonts
+	wget -q \
+		http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css\
+		-O ${TRAC_PATH}/htdocs/css/bootstrap.css
+	wget -q \
+		http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\
+		-O ${TRAC_PATH}/htdocs/js/jquery.min.js
+	wget -q \
+		http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js\
+		-O ${TRAC_PATH}/htdocs/js/bootstrap.min.js
+	wget -q \
+		http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot\
+		-O ${TRAC_PATH}/htdocs/fonts/glyphicons-halflings-regular.eot
+	wget -q \
+		http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg\
+		-O ${TRAC_PATH}/htdocs/fonts/glyphicons-halflings-regular.svg
+	wget -q \
+		http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf\
+		-O ${TRAC_PATH}/htdocs/fonts/glyphicons-halflings-regular.ttf
+	wget -q \
+		http://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff\
+		-O ${TRAC_PATH}/htdocs/fonts/glyphicons-halflings-regular.woff
 
 run:
 	cp -r htdocs/* ${BUILD_PROJECT}/htdocs

@@ -22,6 +22,10 @@ To start Trac for testing:
 
     make run
 
+Install on existing project:
+
+  make install TRAC_PATH=/my/project/path
+
 Default username and password is: username/password.
 
 ## Bootstrap 3
