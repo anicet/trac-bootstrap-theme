@@ -114,3 +114,8 @@ ul.breadcrumb {
 dt.wiki, dt.wiki a {
   background-repeat: no-repeat !important;
 }
+
+div.trac-resizable{
+  width: 100% !important;
+}
+
